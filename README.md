@@ -1,5 +1,4 @@
-```
-mermaid
+```mermaid
 
 classDiagram
     direction LR
@@ -27,7 +26,12 @@ classDiagram
 The core is the main file
 
 ## Libraries 
+Sys and Os
 
 ## Componets
+Coponents 
 
-## 
+## Modulues
+The modules are components (python file) that the core can use. 
+in order for the core to correctly load the modules they must be in the appropriate folder (modules)
+Anyway each module can work standalone. 
