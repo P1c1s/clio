@@ -1,0 +1,35 @@
+cat /sys/devices/virtual/thermal/thermal_zone0/temp 
+
+script commands if, read, for, while e do while exit 
+
+#day
+PS1='\[\033[0;38;5;99m\][\D{%d}\[\033[5;38;5;99m\].'
+PS1+='\[\033[00m\]' #reset blinking
+#month
+PS1+='\[\033[0;38;5;99m\]\D{%b}\[\033[5;38;5;99m\].'
+PS1+='\[\033[00m\]' #reset blinking
+#year
+PS1+='\[\033[0;38;5;99m\]\D{%y}\[\033[5;38;5;99m\] '
+PS1+='\[\033[00m\]' #reset blinking
+#hours
+PS1+='\[\033[0;38;5;99m\]\D{%H}\[\033[5;38;5;99m\]:'
+PS1+='\[\033[00m\]' #reset blinking
+#minutes
+PS1+='\[\033[0;38;5;99m\]\D{%M}\[\033[5;38;5;99m\]:'
+PS1+='\[\033[00m\]' #reset blinking
+#seconds
+PS1+='\[\033[0;38;5;99m\]\D{%S}] '
+#user
+PS1+='\[\033[1;38;5;166m\]\u'
+#@
+PS1+='\[\033[1;38;5;45m\]@'
+#host
+PS1+='\[\033[1;38;5;166m\]\h'
+#:
+PS1+='\[\033[1;38;5;45m\]:'
+#path
+PS1+='\[\033[1;38;5;50m\]\w'
+#other
+PS1+='\[\033[1;38;5;250m\] \$\[\033[1;38;5;250m\] '
+#reset
+#PS1+='\[\033[00m\]'

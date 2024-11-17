@@ -42,9 +42,10 @@ def show_in():
   print("docker pull <image>  –  Pull an image or a repository from a registry")
   print("docker push  –  Push an image or a repository to a registry")
   print("docker start <container>  –  Start one or more stopped containers")
-  print("docker run -dit --name=<name of conatiner>  -v </local-path:/container-path> -p <port:port>  –  Run a command in a new container, [dit=> detach|interactive|tty]")
+  print("docker run -dit --name=<name of conatiner>  -v </local-path:/container-path> -p <local-port:docker-port>  –  Run a command in a new container, [dit=> detach|interactive|tty]")
   print("docker attach <container>  –  Attach to a running container")
   print("docker exec -t <container> <console (bash,sh,..)> -c <command>  –  Run a command in a run-time container [t=> tty]")
+  print("Ctrl + p && Crtl + q–  Correct way to detach from a container without stopping it")
 def show_images():
   print(REDBOLD, "Manage Images", RED)
   print("docker tag <old-repo:oldVersion> <new-repo:newVersion>  -  Create a tag name that refers to source image")

@@ -35,6 +35,8 @@ if funzione1(1,"help"):
    help(False)
 if funzione1(1,"info"):
     info()
+if funzione1(1,"log"):
+    log()
 if funzione1(1,"modules"):
    show_modules()
 if funzione1(1, "unknow"):

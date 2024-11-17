@@ -6,6 +6,27 @@ import sys
 path= os.path.split(os.path.realpath(__file__))[0]
 file_name = os.path.split(os.path.realpath(__file__))[1]
 
+a=os.listdir(path+"/../modules")
+a.sort()
+enabled_modules=[]
+for x in a:
+    if ".py" in x:
+        enabled_modules+=[x.split(".py")[0]]
+        #print(enabled_modules)
+    
+
+# def import_modules(modules):
+
+#     for x in modules:
+#         try:
+#             __import__(x)
+#             print("Successfully imported ", x, '.')
+#         except ImportError:
+#             print("Error importing ", x, '.')
+
+# print(enabled_modules)
+# import_modules(enabled_modules)
+
 if os.path.exists(path+"/../modules/apt.py"):
     from modules import apt 
     enabled_modules=["apt"]
@@ -63,6 +84,8 @@ def help(bool):
     print(WHITEBOLD, "modules", WHITE, "    -  Show enabled and not enabled modules")
     print(WHITEBOLD, "unknow", WHITE, "     -  ...")
     print(WHITEBOLD, "version", WHITE, "    -  Show the version of Clio")
+def log():
+    read("history.log")
 def info():
     #for module in enabled_modules:
         print("commands")
@@ -189,8 +212,8 @@ def load():
           data.append(line.split(' '))
           line = f.readline()
   print(data)
-def read():
-  with open('DB_data.dat', 'r') as f:
+def read(fileName):
+  with open(fileName, 'r') as f:
       print(f.read())
       
 

@@ -29,9 +29,9 @@ The core is the main file
 Sys and Os
 
 ## Componets
-Coponents 
+Coponents are (python file) ...
 
-## Modulues
+## Modules
 The modules are components (python file) that the core can use. 
 in order for the core to correctly load the modules they must be in the appropriate folder (modules)
 Anyway each module can work standalone. 
