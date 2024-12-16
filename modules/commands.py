@@ -55,6 +55,7 @@ def network_commands():
     print(WHITEBOLD, "ping", WHITE, "       -  Send ICMP ECHO_REQUEST to network hosts")
     print(WHITEBOLD, "route", WHITE, "    - ")
     print(WHITEBOLD, "routel", WHITE, "    - ")
+    print(WHITEBOLD, "sipcalc", WHITE, "       -  Netmask calculator")
     print(WHITEBOLD, "ssh", WHITE, "        -  OpenSSH remote login client")
     print(WHITEBOLD, "telnet", WHITE, "     -  User interface to the TELNET protocol")
     print(WHITEBOLD, "whois", WHITE, "      -  Show advaced details about a domain")
@@ -76,8 +77,10 @@ def filesystem_commands():
     print(WHITEBOLD, "tail", WHITE, "       -  Output the last part of files")
     print(WHITEBOLD, "touch", WHITE, "      -  Create a new, empty file, or update the modified time of an existing one")
     print(WHITEBOLD, "tree", WHITE, "       -  List contents of directories in a tree-like format")
+    print(WHITEBOLD, "ranger", WHITE, "     -  Visual file manager")
     print(WHITEBOLD, "rm", WHITE, "         -  Remove files or directories")
     print(WHITEBOLD, "rmdir", WHITE, "      -  Remove empty directories")
+    #vmstat
     print(WHITEBOLD, "wc", WHITE, "         -  Print newline, word, and byte counts for each file")
     print("mount umount")
 def system_commands():
@@ -86,6 +89,7 @@ def system_commands():
     print(WHITEBOLD, "cal", WHITE, "        -  Displays a calendar")
     print(WHITEBOLD, "date", WHITE, "       -  Print or set the system date and time")
     print(WHITEBOLD, "free", WHITE, "       - ...")
+    print(WHITEBOLD, "fwupdmgr", WHITE, "   -  Firmware update manager client utility")
     print(WHITEBOLD, "hostaname", WHITE, "  -  Show or set the system's host name")
     print(WHITEBOLD, "htop", WHITE, "       -  Display Linux processes in interactive mode")
     print(WHITEBOLD, "journalctl", WHITE, " -  Query the systemd journal")
