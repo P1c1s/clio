@@ -1,3 +1,15 @@
+# Giochimate
+1. [Schema pagina](#pageScheme)
+2. [Schema classi](#classesScheme)
+3. [Changelog](#changelog)
+    1. [Salvataggio password](#cy)
+    2. [Algoritmo di cifratura](#cy)
+    3. [...](#cy)
+
+
+## Schema pagina {#Pagescheme}
+
+
 ```mermaid
 
 classDiagram
