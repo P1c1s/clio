@@ -144,4 +144,4 @@ if file_name == "docker.py" and len(sys.argv) > 1 and sys.argv[1] == "show":
 if file_name == "docker.py" and len(sys.argv) > 1 and sys.argv[1] == "list":
   list()
 
-print("docker stop $(docker ps -a -q)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+#print("docker stop $(docker ps -a -q)!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
