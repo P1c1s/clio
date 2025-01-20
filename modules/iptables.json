@@ -1,0 +1,86 @@
+{
+  "title": "Iptables Rules and Commands",
+  "description": "A collection of common iptables rules and commands used for configuring firewall and NAT rules.",
+  "categories": [
+    {
+      "category": "filter",
+      "description": "Filter table rules for controlling the traffic between networks and hosts.",
+      "commands": [
+        {
+          "command": "-A FORWARD -s 192.168.2.0/24 -d 192.168.179.0/24 -j REJECT -m comment --comment \"block traffic from LAN C to LAN S\"",
+          "description": "Block traffic from LAN C (192.168.2.0/24) to LAN S (192.168.179.0/24)."
+        },
+        {
+          "command": "-A FORWARD -s 192.168.0.110/32 -d 192.168.179.101/32 -p tcp -m tcp --dport 22 -m comment --comment \"windows\" -j ACCEPT",
+          "description": "Allow TCP traffic from 192.168.0.110 to 192.168.179.101 on port 22 (SSH) for Windows."
+        },
+        {
+          "command": "-A FORWARD -s 192.168.178.11/32 -d 192.168.179.101/32 -p tcp -m tcp --dport 22 -m comment --comment \"thinkpad\" -j ACCEPT",
+          "description": "Allow TCP traffic from 192.168.178.11 to 192.168.179.101 on port 22 (SSH) for Thinkpad."
+        },
+        {
+          "command": "-A FORWARD -d 192.168.179.101/32 -p tcp -m tcp --dport 22 -m comment --comment \"block traffic on 22 port of other hostes\" -j REJECT --reject-with icmp-port-unreachable",
+          "description": "Block any other SSH traffic (port 22) to 192.168.179.101 from other hosts, sending ICMP port unreachable."
+        }
+      ]
+    },
+    {
+      "category": "nat",
+      "description": "NAT table rules for Network Address Translation, including Docker-related NAT rules.",
+      "commands": [
+        {
+          "command": "-A OUTPUT -d 127.0.0.11/32 -j DOCKER_OUTPUT",
+          "description": "Direct output traffic destined for 127.0.0.11 to the DOCKER_OUTPUT chain."
+        },
+        {
+          "command": "-A POSTROUTING -d 127.0.0.11/32 -j DOCKER_POSTROUTING",
+          "description": "Direct post-routing traffic destined for 127.0.0.11 to the DOCKER_POSTROUTING chain."
+        },
+        {
+          "command": "-A DOCKER_OUTPUT -d 127.0.0.11/32 -p tcp -m tcp --dport 53 -j DNAT --to-destination 127.0.0.11:37649",
+          "description": "Perform DNAT (Destination NAT) on TCP traffic destined for 127.0.0.11 on port 53, redirecting it to 127.0.0.11:37649."
+        },
+        {
+          "command": "-A DOCKER_OUTPUT -d 127.0.0.11/32 -p udp -m udp --dport 53 -j DNAT --to-destination 127.0.0.11:45424",
+          "description": "Perform DNAT on UDP traffic destined for 127.0.0.11 on port 53, redirecting it to 127.0.0.11:45424."
+        },
+        {
+          "command": "-A DOCKER_POSTROUTING -s 127.0.0.11/32 -p tcp -m tcp --sport 37649 -j SNAT --to-source :53",
+          "description": "Perform SNAT (Source NAT) on TCP traffic originating from 127.0.0.11 on port 37649, changing source port to 53."
+        },
+        {
+          "command": "-A DOCKER_POSTROUTING -s 127.0.0.11/32 -p udp -m udp --sport 45424 -j SNAT --to-source :53",
+          "description": "Perform SNAT on UDP traffic originating from 127.0.0.11 on port 45424, changing source port to 53."
+        }
+      ]
+    },
+    {
+      "category": "Drop Traffic",
+      "description": "Commands used to drop specific traffic based on source IP or other conditions.",
+      "commands": [
+        {
+          "command": "iptables -A FORWARD -p tcp -s 192.168.0.45 -j DROP",
+          "description": "Drop all TCP traffic coming from the source IP 192.168.0.45."
+        },
+        {
+          "command": "iptables -I FORWARD 1 -i eth0 -o eth1 -s 192.168.178.100 --dport 1 -j DROP",
+          "description": "Insert a rule to drop any incoming traffic on port 1 from the source IP 192.168.178.100 on the `eth0` interface to the `eth1` interface."
+        }
+      ]
+    },
+    {
+      "category": "MAC Address Filtering",
+      "description": "Commands used to filter traffic based on MAC addresses.",
+      "commands": [
+        {
+          "command": "iptables -A INPUT -p all -m mac --mac-source -m comment --comment \"raspberry pi\"",
+          "description": "Apply an input rule for all traffic coming from a specific MAC address, tagged with the comment 'raspberry pi'."
+        },
+        {
+          "command": "iptables -A INPUT -p all -m mac --mac-source b8:27:eb:c6:a5:31 -j ACCEPT",
+          "description": "Accept all traffic from the MAC address b8:27:eb:c6:a5:31."
+        }
+      ]
+    }
+  ]
+}

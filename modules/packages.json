@@ -1,0 +1,123 @@
+{
+    "title": "Linux package managers",
+    "description": "A collection of common Linux commands categorized by functionality.",
+    "categories": [
+      {
+        "category": "APT",
+        "description": "APT is a command-line package manager that provides commands for managing, searching, and retrieving information about packages. It has the same functionalities as specific APT tools (such as apt-get and apt-cache), enabling additional options that are useful for interactive use.",
+        "commands": [
+          {
+            "command": "apt list",
+            "description": "List packages by name"
+          },
+          {
+            "command": "apt search",
+            "description": "Search through package descriptions"
+          },
+          {
+            "command": "apt show",
+            "description": "Show details of a package"
+          },
+          {
+            "command": "apt install",
+            "description": "Install packages"
+          },
+          {
+            "command": "apt reinstall",
+            "description": "Reinstall packages"
+          },
+          {
+            "command": "apt remove",
+            "description": "Remove packages"
+          },
+          {
+            "command": "apt autoremove",
+            "description": "Automatically remove all unused packages"
+          },
+          {
+            "command": "apt update",
+            "description": "Update the list of available packages"
+          },
+          {
+            "command": "apt upgrade",
+            "description": "Perform a system upgrade by installing and updating packages"
+          },
+          {
+            "command": "apt full-upgrade",
+            "description": "Perform a full system upgrade by removing, installing, and updating packages"
+          },
+          {
+            "command": "apt edit-sources",
+            "description": "Edit the sources file for package information"
+          },
+          {
+            "command": "apt satisfy",
+            "description": "Satisfy dependency strings"
+          }
+        ]
+      },
+      {
+        "category": "DNF",
+        "description": "A set of commands for managing, installing, updating, and removing software packages on Linux-based systems. These commands allow users to perform package operations in an efficient and controlled manner.",
+        "commands": [
+          {
+            "command": "dnf install",
+            "description": "Install software"
+          },
+          {
+            "command": "dnf upgrade",
+            "description": "Upgrade software"
+          },
+          {
+            "command": "dnf remove",
+            "description": "Remove (uninstall) software"
+          },
+          {
+            "command": "dnf distro-sync",
+            "description": "Upgrade or downgrade installed software to the latest available versions"
+          },
+          {
+            "command": "dnf downgrade",
+            "description": "Downgrade software"
+          },
+          {
+            "command": "dnf dnf reinstall",
+            "description": "Reinstall software"
+          },
+          {
+            "command": "dnf debuginfo-install",
+            "description": "Install debuginfo packages"
+          },
+          {
+            "command": "dnf swap",
+            "description": "Remove software and install another in one transaction"
+          },
+          {
+            "command": "dnf mark",
+            "description": "Change the reason of an installed package"
+          },
+          {
+            "command": "dnf autoremove",
+            "description": "Remove all unneeded packages originally installed as dependencies"
+          },
+          {
+            "command": "dnf provides",
+            "description": "Find what package provides the given value"
+          },
+          {
+            "command": "dnf replay",
+            "description": "Replay a transaction that was previously stored to a directory"
+          },
+          {
+            "command": "dnf check-upgrade",
+            "description": "Check for available package upgrades"
+          },
+          {
+            "command": "dnf check",
+            "description": "Check for problems in the packagedb"
+          }
+        ]
+        }
+    ]
+  }
+  

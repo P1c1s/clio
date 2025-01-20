@@ -1,0 +1,412 @@
+{
+    "title": "Linux Commands",
+    "description": "A collection of common Linux commands categorized by functionality.",
+    "categories": [
+        {
+            "category": "User",
+            "description": "User management commands",
+            "commands": [
+                {
+                    "command": "id",
+                    "description": "Print real and effective user and group IDs"
+                },
+                {
+                    "command": "last",
+                    "description": "Show a listing of last logged in users"
+                },
+                {
+                    "command": "lastb",
+                    "description": "Show a log of the /var/log/btmp file, which contains all the bad login attempts"
+                },
+                {
+                    "command": "pinky",
+                    "description": "Show some information about the currently logged in users on system"
+                },
+                {
+                    "command": "rwho",
+                    "description": ""
+                },
+                {
+                    "command": "su",
+                    "description": ""
+                },
+                {
+                    "command": "sudo",
+                    "description": "Super User Do"
+                },
+                {
+                    "command": "w",
+                    "description": "Show who is logged on and what they are doing"
+                },
+                {
+                    "command": "who",
+                    "description": "Print information about users who are currently logged in"
+                },
+                {
+                    "command": "whoami",
+                    "description": "Print the user name associated with the current effective user id"
+                },
+                {
+                    "command": "passwd",
+                    "description": ""
+                },
+                {
+                    "command": "chmod",
+                    "description": ""
+                },
+                {
+                    "command": "chgrp",
+                    "description": ""
+                },
+                {
+                    "command": "kill",
+                    "description": ""
+                },
+                {
+                    "command": "dmesg",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "Console",
+            "description": "Console commands",
+            "commands": [
+                {
+                    "command": "alias",
+                    "description": "Define new alias and show it"
+                },
+                {
+                    "command": "awk",
+                    "description": "Pattern"
+                },
+                {
+                    "command": "clear",
+                    "description": "Clear the terminal screen"
+                },
+                {
+                    "command": "dmesg",
+                    "description": "Print or control the kernel ring buffer"
+                },
+                {
+                    "command": "echo",
+                    "description": "Write arguments to the standard output"
+                },
+                {
+                    "command": "exit",
+                    "description": "Exit from the current shell"
+                },
+                {
+                    "command": "getconf",
+                    "description": "Query system configuration variables"
+                },
+                {
+                    "command": "grep",
+                    "description": "Match patterns"
+                },
+                {
+                    "command": "help",
+                    "description": "Display information about builtin commands"
+                },
+                {
+                    "command": "history",
+                    "description": "Display or manipulate the history list"
+                },
+                {
+                    "command": "man",
+                    "description": "An interface to the system reference manuals"
+                },
+                {
+                    "command": "printenv",
+                    "description": "Print all or part of environment"
+                },
+                {
+                    "command": "source",
+                    "description": "Run commands from a file in the current shell"
+                },
+                {
+                    "command": "tty",
+                    "description": ""
+                },
+                {
+                    "command": "unalias",
+                    "description": "Remove each name from the list of defined aliases"
+                }
+            ]
+        },
+        {
+            "category": "Network",
+            "description": "Network commands",
+            "commands": [
+                {
+                    "command": "arp",
+                    "description": "The arp cache"
+                },
+                {
+                    "command": "arp-scan",
+                    "description": "..."
+                },
+                {
+                    "command": "elinks",
+                    "description": "Lynx-like alternative character mode WWW browser"
+                },
+                {
+                    "command": "bmon",
+                    "description": ".."
+                },
+                {
+                    "command": "host",
+                    "description": ""
+                },
+                {
+                    "command": "ip",
+                    "description": "Show / manipulate routing, network devices, interfaces and tunnels"
+                },
+                {
+                    "command": "nc",
+                    "description": ""
+                },
+                {
+                    "command": "netstat",
+                    "description": "Listening port"
+                },
+                {
+                    "command": "nmcli",
+                    "description": "..."
+                },
+                {
+                    "command": "tcpdump",
+                    "description": "Dump traffic on a network"
+                },
+                {
+                    "command": "nmap",
+                    "description": "Network scanner"
+                },
+                {
+                    "command": "nslookup",
+                    "description": "Show domain information"
+                },
+                {
+                    "command": "ping",
+                    "description": "Send ICMP ECHO_REQUEST to network hosts"
+                },
+                {
+                    "command": "route",
+                    "description": ""
+                },
+                {
+                    "command": "routel",
+                    "description": ""
+                },
+                {
+                    "command": "sipcalc",
+                    "description": "Netmask calculator"
+                },
+                {
+                    "command": "ssh",
+                    "description": "OpenSSH remote login client"
+                },
+                {
+                    "command": "telnet",
+                    "description": "User interface to the TELNET protocol"
+                },
+                {
+                    "command": "whois",
+                    "description": "Show advanced details about a domain"
+                }
+            ]
+        },
+        {
+            "category": "File System",
+            "description": "File system commands",
+            "commands": [
+                {
+                    "command": "cat",
+                    "description": "Concatenate files and print on the standard output"
+                },
+                {
+                    "command": "cp",
+                    "description": "Copy files and directories"
+                },
+                {
+                    "command": "cd",
+                    "description": "Change directory to some other location"
+                },
+                {
+                    "command": "df",
+                    "description": "Display the disk space used in the file system"
+                },
+                {
+                    "command": "du",
+                    "description": "Disk Usage"
+                },
+                {
+                    "command": "fdisk",
+                    "description": ""
+                },
+                {
+                    "command": "file",
+                    "description": "Determine file type"
+                },
+                {
+                    "command": "find",
+                    "description": "Search for files in a directory hierarchy"
+                },
+                {
+                    "command": "head",
+                    "description": "Output the first part of files"
+                },
+                {
+                    "command": "mkdir",
+                    "description": "Make a directory, if they do not already exist"
+                },
+                {
+                    "command": "nano",
+                    "description": "Nano's ANOther editor, command line text editor inspired by Pico (Unix-like)"
+                },
+                {
+                    "command": "pwd",
+                    "description": "Print name of current/working directory"
+                },
+                {
+                    "command": "tail",
+                    "description": "Output the last part of files"
+                },
+                {
+                    "command": "touch",
+                    "description": "Create a new, empty file, or update the modified time of an existing one"
+                },
+                {
+                    "command": "tree",
+                    "description": "List contents of directories in a tree-like format"
+                },
+                {
+                    "command": "ranger",
+                    "description": "Visual file manager"
+                },
+                {
+                    "command": "rm",
+                    "description": "Remove files or directories"
+                },
+                {
+                    "command": "rmdir",
+                    "description": "Remove empty directories"
+                },
+                {
+                    "command": "wc",
+                    "description": "Print newline, word, and byte counts for each file"
+                },
+                {
+                    "command": "mount",
+                    "description": ""
+                },
+                {
+                    "command": "umount",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "category": "System",
+            "description": "System commands",
+            "commands": [
+                {
+                    "command": "crontab",
+                    "description": "The crontab is used to automate all types of tasks on Linux systems"
+                },
+                {
+                    "command": "cal",
+                    "description": "Displays a calendar"
+                },
+                {
+                    "command": "date",
+                    "description": "Print or set the system date and time"
+                },
+                {
+                    "command": "free",
+                    "description": "..."
+                },
+                {
+                    "command": "fwupdmgr",
+                    "description": "Firmware update manager client utility"
+                },
+                {
+                    "command": "hostname",
+                    "description": "Show or set the system's host name"
+                },
+                {
+                    "command": "htop",
+                    "description": "Display Linux processes in interactive mode"
+                },
+                {
+                    "command": "journalctl",
+                    "description": "Query the systemd journal"
+                },
+                {
+                    "command": "lsb_release",
+                    "description": "Show distribution-specific information from /etc/os/release"
+                },
+                {
+                    "command": "lscpu",
+                    "description": "Display information about the CPU architecture"
+                },
+                {
+                    "command": "lspci",
+                    "description": ""
+                },
+                {
+                    "command": "memusage",
+                    "description": "--__-_-_--_-_-_--_-_-_--_"
+                },
+                {
+                    "command": "pidof",
+                    "description": "--__-_-_--_-_-_--_-_-_--_"
+                },
+                {
+                    "command": "reboot",
+                    "description": "Restart the machine"
+                },
+                {
+                    "command": "service",
+                    "description": ""
+                },
+                {
+                    "command": "shutdown",
+                    "description": "Power off the machine"
+                },
+                {
+                    "command": "systemctl",
+                    "description": "Control the systemd system and service manager"
+                },
+                {
+                    "command": "top",
+                    "description": "Display Linux processes"
+                },
+                {
+                    "command": "time",
+                    "description": "Calculate the time from start to end of process (time speedtest)"
+                },
+                {
+                    "command": "type",
+                    "description": "Display information about command type"
+                },
+                {
+                    "command": "uname",
+                    "description": "Print system information"
+                },
+                {
+                    "command": "uptime",
+                    "description": "Tell how long the system has been running"
+                },
+                {
+                    "command": "whereis",
+                    "description": "Locate the binary, source, and manual page files for a command"
+                },
+                {
+                    "command": "which",
+                    "description": "Locate the binary"
+                }
+            ]
+        }
+    ]
+}

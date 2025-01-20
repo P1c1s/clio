@@ -1,0 +1,137 @@
+{
+    "title": "Nmap Commands",
+    "description": "A collection of common Nmap commands categorized by functionality.",
+    "categories": [
+      {
+        "category": "Scanning",
+        "description": "Commands related to scanning networks, hosts, and services.",
+        "commands": [
+          {
+            "command": "nmap -sP",
+            "description": "Ping scan to discover active hosts in a network"
+          },
+          {
+            "command": "nmap -sS",
+            "description": "TCP SYN scan (stealth scan)"
+          },
+          {
+            "command": "nmap -sT",
+            "description": "TCP connect scan (less stealthy than SYN scan)"
+          },
+          {
+            "command": "nmap -sU",
+            "description": "UDP scan to discover open UDP ports"
+          },
+          {
+            "command": "nmap -O",
+            "description": "OS detection"
+          },
+          {
+            "command": "nmap -sV",
+            "description": "Service version detection"
+          },
+          {
+            "command": "nmap -A",
+            "description": "Aggressive scan (includes OS detection, version detection, script scanning, and traceroute)"
+          },
+          {
+            "command": "nmap -p",
+            "description": "Scan specific ports (e.g., 'nmap -p 80,443 192.168.0.1')"
+          }
+        ]
+      },
+      {
+        "category": "Output",
+        "description": "Commands for controlling the output of Nmap scans.",
+        "commands": [
+          {
+            "command": "nmap -oN",
+            "description": "Save the scan results in normal output format"
+          },
+          {
+            "command": "nmap -oX",
+            "description": "Save the scan results in XML format"
+          },
+          {
+            "command": "nmap -oG",
+            "description": "Save the scan results in grepable format"
+          },
+          {
+            "command": "nmap -oA",
+            "description": "Save scan results in all available formats (normal, XML, and grepable)"
+          }
+        ]
+      },
+      {
+        "category": "Performance and Timing",
+        "description": "Commands related to controlling the timing and speed of the scan.",
+        "commands": [
+          {
+            "command": "nmap -T0",
+            "description": "Paranoid scan (very slow)"
+          },
+          {
+            "command": "nmap -T1",
+            "description": "Sneaky scan (slow)"
+          },
+          {
+            "command": "nmap -T2",
+            "description": "Polite scan (slower)"
+          },
+          {
+            "command": "nmap -T3",
+            "description": "Normal scan (default speed)"
+          },
+          {
+            "command": "nmap -T4",
+            "description": "Aggressive scan (faster)"
+          },
+          {
+            "command": "nmap -T5",
+            "description": "Insane scan (very fast)"
+          }
+        ]
+      },
+      {
+        "category": "Script Scanning",
+        "description": "Commands for using Nmap scripting engine (NSE) to automate various tasks and tests.",
+        "commands": [
+          {
+            "command": "nmap --script",
+            "description": "Run a specific Nmap script (e.g., 'nmap --script=http-headers 192.168.0.1')"
+          },
+          {
+            "command": "nmap --script=default",
+            "description": "Run the default set of Nmap scripts"
+          },
+          {
+            "command": "nmap --script-updatedb",
+            "description": "Update the script database"
+          }
+        ]
+      },
+      {
+        "category": "Other Options",
+        "description": "Miscellaneous commands and options for customizations.",
+        "commands": [
+          {
+            "command": "nmap -v",
+            "description": "Increase verbosity level"
+          },
+          {
+            "command": "nmap -d",
+            "description": "Enable debug output"
+          },
+          {
+            "command": "nmap -h",
+            "description": "Show help and available options"
+          },
+          {
+            "command": "nmap --reason",
+            "description": "Display the reason why a port is in a certain state"
+          }
+        ]
+      }
+    ]
+  }
+  

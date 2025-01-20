@@ -1,0 +1,182 @@
+{
+    "categories": [
+      {
+        "category": "Description",
+        "commands": [
+          {
+            "command": "Docker",
+            "description": "Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc. Docker use the Open Container Initiative (OCI) standard compatible with podman."
+          },
+          {
+            "command": "Docker Architecture",
+            "description": "The architecture involves multiple applications packaged into containers which run on a host system using Docker Daemon. Containers are hosted within virtual machines or directly on the host operating system using the Docker engine."
+          }
+        ]
+      },
+      {
+        "category": "Docker Configuration",
+        "commands": [
+          {
+            "command": "curl -sSL https://get.docker.com | sh",
+            "description": "Docker Installation"
+          },
+          {
+            "command": "docker -v",
+            "description": "Verify if Docker is installed"
+          },
+          {
+            "command": "sudo groupadd docker",
+            "description": "Create a new group called docker"
+          },
+          {
+            "command": "sudo usermod -aG docker $USER",
+            "description": "Add $USER to docker group"
+          }
+        ]
+      },
+      {
+        "category": "About Docker",
+        "commands": [
+          {
+            "command": "docker events",
+            "description": "Get real-time events from the server"
+          },
+          {
+            "command": "docker info",
+            "description": "Display system-wide information"
+          },
+          {
+            "command": "docker version",
+            "description": "Show the Docker version information"
+          },
+          {
+            "command": "docker manifest",
+            "description": "NAN"
+          }
+        ]
+      },
+      {
+        "category": "Docker Files",
+        "commands": [
+          {
+            "command": "docker search <image>",
+            "description": "Search the Docker Hub for images"
+          },
+          {
+            "command": "docker pull <image>",
+            "description": "Pull an image or a repository from a registry"
+          },
+          {
+            "command": "docker push",
+            "description": "Push an image or a repository to a registry"
+          },
+          {
+            "command": "docker run -dit --name=<name of container> -v </local-path:/container-path> -p <local-port:docker-port>",
+            "description": "Run a command in a new container [dit=>detach|interactive|tty]"
+          }
+        ]
+      },
+      {
+        "category": "Manage Images",
+        "commands": [
+          {
+            "command": "docker tag <old-repo:oldVersion> <new-repo:newVersion>",
+            "description": "Create a tag name that refers to source image"
+          },
+          {
+            "command": "docker save <path> <image>",
+            "description": "Save Docker image to .tar file specified by path"
+          },
+          {
+            "command": "docker build -t <image_name> <path>",
+            "description": "Build an image from a Docker file"
+          },
+          {
+            "command": "docker images",
+            "description": "List all Docker images"
+          }
+        ]
+      },
+      {
+        "category": "Manage Containers",
+        "commands": [
+          {
+            "command": "docker export <container> | gzip > <container>.tar.gz",
+            "description": "Export container"
+          },
+          {
+            "command": "docker rename <oldContainerName> <newContainerName>",
+            "description": "Rename a container"
+          },
+          {
+            "command": "docker restart <container>",
+            "description": "Restart one or more containers"
+          },
+          {
+            "command": "docker rm <container_id>",
+            "description": "Remove a container"
+          }
+        ]
+      },
+      {
+        "category": "Network",
+        "commands": [
+          {
+            "command": "[Bridge]",
+            "description": "Default network driver. Used when no other driver is specified."
+          },
+          {
+            "command": "[Host]",
+            "description": "For standalone containers, remove network isolation between the container and the Docker host."
+          },
+          {
+            "command": "[None]",
+            "description": "Disable all networking. Usually used with a custom network driver."
+          },
+          {
+            "command": "[Macvlan]",
+            "description": "Allow containers to have MAC addresses and appear as physical devices on the network."
+          }
+        ]
+      },
+      {
+        "category": "Volumes",
+        "commands": [
+          {
+            "command": "docker volume ls",
+            "description": "List volumes"
+          },
+          {
+            "command": "docker volume create",
+            "description": "Create a volume"
+          },
+          {
+            "command": "docker volume inspect",
+            "description": "Display detailed information on one or more volumes"
+          },
+          {
+            "command": "docker volume prune",
+            "description": "Remove all unused local volumes"
+          }
+        ]
+      },
+      {
+        "category": "Instructions",
+        "commands": [
+          {
+            "command": "FROM <image_name>",
+            "description": "Specifies the parent image in the Dockerfile."
+          },
+          {
+            "command": "CMD <command>",
+            "description": "Executed when the container starts."
+          },
+          {
+            "command": "RUN <command>",
+            "description": "Executed during the image build process."
+          }
+        ]
+      }
+    ]
+  }
+  
